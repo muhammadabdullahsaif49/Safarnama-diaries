@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Contact Safarnama Diaries, share your feedback, review our travel website and sign up for email updates.">
+  <meta name="author" content="Safarnama Diaries Team">
+
+  <title>Contact | Safarnama Diaries</title>
+
+  <link rel="icon" href="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=100&q=80"
+    type="image/jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #073f3b;
+      --green-dark: #052f2c;
+      --green-light: #125b53;
+      --gold: #f4d98b;
+      --cream: #fbf9f3;
+      --white: #ffffff;
+      --text: #243632;
+      --muted: #697873;
+      --border: #e4e8e1;
+      --shadow: 0 12px 35px rgba(7, 63, 59, 0.09);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 120px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--green);
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    a:hover {
+      color: #a47a27;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a,
+    input,
+    select,
+    textarea {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    /* ACCESSIBILITY */
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 15px;
+      z-index: 9999;
+      background: var(--gold);
+      color: var(--green-dark);
+      padding: 12px 18px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      top: 15px;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--green);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .header-inner {
+      width: min(1180px, 94%);
+      min-height: 78px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      color: var(--white);
+    }
+
+    .brand:hover {
+      color: var(--gold);
+    }
+
+    .brand img {
+      width: 55px;
+      height: 52px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid rgba(244, 217, 139, 0.55);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    .brand-text strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 23px;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-text span {
+      display: block;
+      color: #c6dfd7;
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    .main-nav ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 3px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .main-nav a {
+      display: block;
+      padding: 9px 10px;
+      border-radius: 5px;
+      color: #f5f7f4;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      background: rgba(244, 217, 139, 0.13);
+      color: var(--gold);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      min-height: 410px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg,
+          rgba(3, 36, 32, 0.91),
+          rgba(3, 36, 32, 0.65),
+          rgba(3, 36, 32, 0.24)),
+        url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2000&q=85') center 52% / cover no-repeat;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(1180px, 92%);
+      margin: 0 auto;
+      padding: 70px 0;
+      color: var(--white);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      max-width: 780px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.15;
+      margin-bottom: 19px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #edf2ee;
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 27px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 23px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--green-dark);
+    }
+
+    .btn-gold:hover {
+      background: #fff0bf;
+      color: var(--green-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, 0.7);
+      color: var(--white);
+      margin-left: 8px;
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--green);
+    }
+
+    /* SECTION STYLING */
+
+    .section {
+      padding: 75px 0;
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .section-heading {
+      max-width: 740px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      color: #9a782b;
+      margin-bottom: 9px;
+    }
+
+    .section-heading h2 {
+      color: var(--green);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(29px, 4vw, 42px);
+      line-height: 1.25;
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* CONTACT INFORMATION CARDS */
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: -30px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-card {
+      background: var(--white);
+      padding: 28px 24px;
+      border: 1px solid rgba(7, 63, 59, 0.07);
+      border-radius: 9px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .contact-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #f8efd8;
+      color: var(--green);
+      font-size: 24px;
+    }
+
+    .contact-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card a {
+      font-weight: 600;
+    }
+
+    /* CONTACT FORM LAYOUT */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.85fr);
+      align-items: start;
+      gap: 30px;
+    }
+
+    .form-card,
+    .sidebar-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-card {
+      padding: 35px;
+    }
+
+    .form-heading {
+      margin-bottom: 28px;
+    }
+
+    .form-heading .eyebrow {
+      color: #9a782b;
+      margin-bottom: 8px;
+    }
+
+    .form-heading h2 {
+      color: var(--green);
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      line-height: 1.3;
+      margin-bottom: 9px;
+    }
+
+    .form-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* FIELDSETS */
+
+    fieldset {
+      min-width: 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 23px;
+      margin-bottom: 25px;
+    }
+
+    legend {
+      padding: 0 10px;
+      color: var(--green);
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .form-group {
+      min-width: 0;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label,
+    .field-label {
+      display: block;
+      color: #314640;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .required-mark {
+      color: #b44c3d;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid #d9e0d9;
+      border-radius: 5px;
+      background: #fff;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-control:focus {
+      border-color: var(--green-light);
+      box-shadow: 0 0 0 3px rgba(18, 91, 83, 0.1);
+    }
+
+    textarea.form-control {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    select.form-control {
+      cursor: pointer;
+    }
+
+    .form-help {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* RADIO AND CHECKBOX OPTIONS */
+
+    .option-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .option-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 13px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #fdfdfb;
+      color: #41534d;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .option-item:hover {
+      border-color: #a5bdb3;
+      background: #f5f9f5;
+    }
+
+    .option-item input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--green);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .option-item:has(input:checked) {
+      border-color: var(--green-light);
+      background: #f0f7f2;
+    }
+
+    .inline-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .inline-options .option-item {
+      flex: 1 1 90px;
+    }
+
+    /* STAR RATING */
+
+    .rating-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .rating-option {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 10px 13px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #fff;
+      color: #46574f;
+      font-size: 12px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .rating-option input {
+      accent-color: var(--green);
+    }
+
+    .rating-option .stars {
+      color: #b68a2f;
+      letter-spacing: 1px;
+    }
+
+    .rating-option:has(input:checked) {
+      border-color: var(--green-light);
+      background: #f1f7f2;
+    }
+
+    /* NEWSLETTER */
+
+    .newsletter-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      padding: 18px;
+      margin-bottom: 25px;
+      background: #f8f5e9;
+      border: 1px solid #eee3bf;
+      border-radius: 7px;
+    }
+
+    .newsletter-box input {
+      width: 17px;
+      height: 17px;
+      margin-top: 4px;
+      accent-color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .newsletter-box label {
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .newsletter-box small {
+      display: block;
+      color: var(--muted);
+      font-weight: 400;
+      margin-top: 4px;
+      line-height: 1.6;
+    }
+
+    /* FORM ACTIONS */
+
+    .form-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-submit {
+      background: var(--green);
+      color: var(--white);
+      border: 1px solid var(--green);
+    }
+
+    .btn-submit:hover {
+      background: var(--green-light);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-reset {
+      background: var(--white);
+      color: var(--green);
+      border: 1px solid #cbd7d0;
+    }
+
+    .btn-reset:hover {
+      background: #f0f5f0;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar-card {
+      overflow: hidden;
+      margin-bottom: 23px;
+    }
+
+    .sidebar-image {
+      height: 210px;
+      overflow: hidden;
+    }
+
+    .sidebar-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar-content {
+      padding: 25px;
+    }
+
+    .sidebar-content h3 {
+      color: var(--green);
+      font-family: 'Playfair Display', serif;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .sidebar-content p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .sidebar-list {
+      list-style: none;
+    }
+
+    .sidebar-list li {
+      padding: 11px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .sidebar-list li:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar-list strong {
+      display: block;
+      color: var(--green);
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .sidebar-note {
+      background: #f8f5e9;
+      border: 1px solid #eee3bf;
+      border-radius: 8px;
+      padding: 23px;
+    }
+
+    .sidebar-note h3 {
+      color: var(--green);
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      margin-bottom: 9px;
+    }
+
+    .sidebar-note p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .text-link {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 3px;
+    }
+
+    /* CTA */
+
+    .cta-section {
+      padding: 70px 0;
+      background:
+        linear-gradient(110deg,
+          rgba(5, 47, 44, 0.96),
+          rgba(7, 63, 59, 0.90)),
+        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80') center / cover no-repeat;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      max-width: 750px;
+      margin: 0 auto 15px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.25;
+    }
+
+    .cta-section p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #e0e9e3;
+      font-size: 15px;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      background: #042c29;
+      color: #e4ece7;
+      padding: 55px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 38px;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+      font-size: 25px;
+      margin-bottom: 13px;
+    }
+
+    .footer-about p {
+      color: #bdcec6;
+      font-size: 13px;
+      max-width: 340px;
+    }
+
+    .footer-column h3 {
+      color: var(--gold);
+      font-size: 14px;
+      margin-bottom: 17px;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px 15px;
+    }
+
+    .footer-links a,
+    .footer-contact a {
+      color: #d3dfd8;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover,
+    .footer-contact a:hover {
+      color: var(--gold);
+    }
+
+    .footer-contact p {
+      color: #bdcec6;
+      font-size: 13px;
+      margin-bottom: 10px;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-bottom {
+      padding: 19px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+      color: #b8c9c1;
+      font-size: 11px;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 1100px) {
+      .header-inner {
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+        gap: 12px;
+      }
+
+      .main-nav ul {
+        justify-content: center;
+      }
+
+      .main-nav a {
+        padding: 8px 9px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 20px;
+      }
+
+      .contact-sidebar .sidebar-note {
+        grid-column: 1 / -1;
+      }
+
+      .contact-cards {
+        grid-template-columns: 1fr;
+        margin-top: 25px;
+      }
+
+      .contact-card {
+        padding: 23px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        min-height: 370px;
+      }
+
+      .hero-content {
+        padding: 60px 0;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .form-card {
+        padding: 22px 16px;
+      }
+
+      fieldset {
+        padding: 18px 13px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+      }
+
+      .form-group.full-width {
+        grid-column: auto;
+      }
+
+      .option-list {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-sidebar .sidebar-note {
+        grid-column: auto;
+      }
+
+      .rating-options {
+        flex-direction: column;
+      }
+
+      .rating-option {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-inner {
+        width: 94%;
+        padding: 12px 0;
+      }
+
+      .brand img {
+        width: 45px;
+        height: 43px;
+      }
+
+      .brand-text strong {
+        font-size: 20px;
+      }
+
+      .brand-text span {
+        font-size: 9px;
+      }
+
+      .main-nav ul {
+        gap: 2px;
+      }
+
+      .main-nav a {
+        padding: 7px;
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: 350px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .btn {
+        padding: 12px 15px;
+        font-size: 12px;
+      }
+
+      .btn-outline {
+        margin: 10px 0 0;
+      }
+
+      .section-heading h2 {
+        font-size: 30px;
+      }
+
+      .form-heading h2 {
+        font-size: 27px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 27px;
+      }
+
+      .footer-about {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand" aria-label="Safarnama Diaries home">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=200&q=80"
+          alt="Mountain landscape logo" width="55" height="52">
+
+        <span class="brand-text">
+          <strong>Safarnama Diaries</strong>
+          <span>Real journeys. Real stories. Across Pakistan.</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="writers.html">Writers</a></li>
+          <li><a href="travel-tips.html">Travel Tips</a></li>
+          <li><a href="submit-story.html">Share Your Story</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Let's Stay Connected</span>
+
+        <h1>We'd Love to Hear Your Story</h1>
+
+        <p>
+          Have a question, a suggestion or a travel experience to share?
+          Get in touch with the Safarnama Diaries team. Your feedback
+          helps us improve and inspire more people to explore Pakistan.
+        </p>
+
+        <a href="#contact-form" class="btn btn-gold">
+          Send Us a Message &rarr;
+        </a>
+
+        <a href="#our-details" class="btn btn-outline">
+          Contact Details
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT CARDS -->
+    <section class="container" aria-label="Contact options">
+      <div class="contact-cards">
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">&#9993;</div>
+          <h3>Email Us</h3>
+          <p>
+            Have a question or suggestion?
+            <br>
+            <a href="mailto:safarnamadiaries@example.com">
+              safarnamadiaries@gmail.com
+            </a>
+          </p>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">&#128172;</div>
+          <h3>Share Feedback</h3>
+          <p>
+            Tell us what you enjoyed and how we can make your
+            experience better.
+          </p>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">&#9997;</div>
+          <h3>Stay Updated</h3>
+          <p>
+            Sign up for email updates to hear about new stories,
+            destinations and events.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS AND FORM -->
+    <section class="section" id="our-details">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Get in Touch</span>
+          <h2>Contact Us &amp; Share Your Review</h2>
+          <p>
+            Whether you want to ask a question, suggest an improvement
+            or review our website, use the form below. We appreciate
+            every message from our readers.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+
+          <!-- MAIN FORM -->
+          <div class="form-card" id="contact-form">
+
+            <div class="form-heading">
+              <span class="eyebrow">Your Voice Matters</span>
+              <h2>Contact / Review Form</h2>
+              <p>
+                Please fill in the details below. Fields marked
+                with an asterisk (*) are required.
+              </p>
+            </div>
+
+            <form action="/api/contact" method="post">
+
+              <!-- PERSONAL INFORMATION -->
+              <fieldset>
+                <legend>Personal Information</legend>
+
+                <div class="form-grid">
+
+                  <div class="form-group">
+                    <label for="c-name">
+                      Full Name <span class="required-mark">*</span>
+                    </label>
+                    <input class="form-control" type="text" id="c-name" name="name" placeholder="Enter your full name"
+                      autocomplete="name" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="c-email">
+                      Email Address <span class="required-mark">*</span>
+                    </label>
+                    <input class="form-control" type="email" id="c-email" name="email" placeholder="you@example.com"
+                      autocomplete="email" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="c-age">Age</label>
+                    <input class="form-control" type="number" id="c-age" name="age" min="10" max="100"
+                      placeholder="Your age">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="c-phone">Contact Number</label>
+                    <input class="form-control" type="tel" id="c-phone" name="phone" placeholder="03XX-XXXXXXX"
+                      autocomplete="tel">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="c-edu">Education</label>
+                    <select class="form-control" id="c-edu" name="education">
+                      <option value="">Select education</option>
+                      <option value="Matric">Matric</option>
+                      <option value="Intermediate">Intermediate</option>
+                      <option value="Bachelor's">Bachelor's</option>
+                      <option value="Master's">Master's</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="c-prof">Profession</label>
+                    <input class="form-control" type="text" id="c-prof" name="profession"
+                      placeholder="e.g. Student, Teacher">
+                  </div>
+
+                </div>
+              </fieldset>
+
+              <!-- HOW VISITORS FOUND THE WEBSITE -->
+              <fieldset>
+                <legend>How Did You Hear About Us?</legend>
+
+                <div class="option-list">
+
+                  <label class="option-item" for="h-friend">
+                    <input type="radio" id="h-friend" name="heard_from" value="friend">
+                    Friend or family
+                  </label>
+
+                  <label class="option-item" for="h-social">
+                    <input type="radio" id="h-social" name="heard_from" value="social">
+                    Social media
+                  </label>
+
+                  <label class="option-item" for="h-search">
+                    <input type="radio" id="h-search" name="heard_from" value="search">
+                    Search engine
+                  </label>
+
+                  <label class="option-item" for="h-class">
+                    <input type="radio" id="h-class" name="heard_from" value="class">
+                    University or class
+                  </label>
+
+                  <label class="option-item" for="h-other">
+                    <input type="radio" id="h-other" name="heard_from" value="other">
+                    Other
+                  </label>
+
+                </div>
+              </fieldset>
+
+              <!-- VISIT AGAIN -->
+              <fieldset>
+                <legend>Would You Visit Our Website Again?</legend>
+
+                <div class="inline-options">
+
+                  <label class="option-item" for="v-yes">
+                    <input type="radio" id="v-yes" name="visit_again" value="yes">
+                    Yes
+                  </label>
+
+                  <label class="option-item" for="v-maybe">
+                    <input type="radio" id="v-maybe" name="visit_again" value="maybe">
+                    Maybe
+                  </label>
+
+                  <label class="option-item" for="v-no">
+                    <input type="radio" id="v-no" name="visit_again" value="no">
+                    No
+                  </label>
+
+                </div>
+              </fieldset>
+
+              <!-- WEBSITE REVIEW -->
+              <fieldset>
+                <legend>Your Feedback</legend>
+
+                <div class="form-group">
+                  <span class="field-label">How would you rate our website?</span>
+
+                  <div class="rating-options">
+
+                    <label class="rating-option" for="rating-5">
+                      <input type="radio" id="rating-5" name="rating" value="5">
+                      <span class="stars" aria-hidden="true">★★★★★</span>
+                      Excellent
+                    </label>
+
+                    <label class="rating-option" for="rating-4">
+                      <input type="radio" id="rating-4" name="rating" value="4">
+                      <span class="stars" aria-hidden="true">★★★★</span>
+                      Good
+                    </label>
+
+                    <label class="rating-option" for="rating-3">
+                      <input type="radio" id="rating-3" name="rating" value="3">
+                      <span class="stars" aria-hidden="true">★★★</span>
+                      Average
+                    </label>
+
+                    <label class="rating-option" for="rating-2">
+                      <input type="radio" id="rating-2" name="rating" value="2">
+                      <span class="stars" aria-hidden="true">★★</span>
+                      Poor
+                    </label>
+
+                    <label class="rating-option" for="rating-1">
+                      <input type="radio" id="rating-1" name="rating" value="1">
+                      <span class="stars" aria-hidden="true">★</span>
+                      Very Poor
+                    </label>
+
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 23px;">
+                  <label for="c-comment">Comments or Suggestions</label>
+                  <textarea class="form-control" id="c-comment" name="comment" rows="6"
+                    placeholder="Tell us what you liked or what we can improve..."></textarea>
+                </div>
+              </fieldset>
+
+              <!-- NEWSLETTER -->
+              <div class="newsletter-box">
+                <input type="checkbox" id="c-news" name="newsletter" value="yes">
+
+                <label for="c-news">
+                  Sign me up for email updates
+                  <small>
+                    Receive updates about new travel stories,
+                    destinations, events and website news.
+                    You can leave this unchecked if you do not
+                    want email updates.
+                  </small>
+                </label>
+              </div>
+
+              <!-- ACTION BUTTONS -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn-submit">
+                  Send Message &rarr;
+                </button>
+
+                <button type="reset" class="btn btn-reset">
+                  Clear Form
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside class="contact-sidebar" aria-label="More contact information">
+
+            <div class="sidebar-card">
+
+              <div class="sidebar-image">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85"
+                  alt="Beautiful mountain scenery and lake" loading="lazy" width="900" height="600">
+              </div>
+
+              <div class="sidebar-content">
+                <h3>Let's Talk Travel</h3>
+
+                <p>
+                  Safarnama Diaries is all about sharing real
+                  experiences, discovering new destinations
+                  and celebrating the beauty of Pakistan.
+                  We welcome your questions, ideas and feedback.
+                </p>
+
+                <ul class="sidebar-list">
+                  <li>
+                    <strong>Email Address</strong>
+                    <a href="mailto:safarnamadiaries@example.com">
+                      safarnamadiaries@example.com
+                    </a>
+                  </li>
+
+                  <li>
+                    <strong>Phone</strong>
+                    +92 300 0000000
+                  </li>
+
+                  <li>
+                    <strong>Location</strong>
+                    [Your University / City], Pakistan
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="sidebar-note">
+              <h3>Have a Travel Story?</h3>
+
+              <p>
+                Have you visited a beautiful place in Pakistan?
+                Share your memories and photographs with our
+                readers.
+              </p>
+
+              <a href="submit-story.html" class="text-link">
+                Share Your Story &rarr;
+              </a>
+            </div>
+
+            <div class="sidebar-note" style="margin-top: 20px;">
+              <h3>Explore Our Website</h3>
+
+              <p>
+                Find travel inspiration, practical tips and
+                stories from different destinations.
+              </p>
+
+              <a href="destinations.html" class="text-link">
+                Explore Destinations &rarr;
+              </a>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+
+        <span class="eyebrow">Every Journey Has a Story</span>
+
+        <h2>Let's Inspire More People to Explore Pakistan</h2>
+
+        <p>
+          Your experiences and ideas can help others discover new
+          places. Join our community and be part of the journey.
+        </p>
+
+        <a href="submit-story.html" class="btn btn-gold">
+          Share Your Story &rarr;
+        </a>
+
+        <a href="events.html" class="btn btn-outline">
+          Explore Our Events
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <div class="footer-brand">Safarnama Diaries</div>
+
+          <p>
+            Real journeys. Real stories. Across Pakistan.
+            Discover beautiful destinations, read personal travel
+            experiences and find inspiration for your next journey.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="writers.html">Writers</a></li>
+            <li><a href="travel-tips.html">Travel Tips</a></li>
+            <li><a href="submit-story.html">Share Your Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3>Get in Touch</h3>
+
+          <p>
+            Have questions, suggestions or feedback?
+            We'd love to hear from you.
+          </p>
+
+          <p>
+            Email:
+            <a href="mailto:safarnamadiaries@example.com">
+              safarnamadiaries@example.com
+            </a>
+          </p>
+
+          <p>
+            <a href="contact.html">Contact &amp; Review &rarr;</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Safarnama Diaries. All rights reserved.
+        </p>
+
+        <p>Created as a web design course project.</p>
+      </div>
+
+    </div>
+  </footer>
+
+<script src="js/forms.js"></script>
+</body>
+
+</html>

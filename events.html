@@ -1,0 +1,1229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover upcoming photo walks, travel writing workshops, contests and community events from Safarnama Diaries.">
+    <meta name="author" content="Safarnama Diaries Team">
+
+    <title>Events | Safarnama Diaries</title>
+
+    <link rel="icon" href="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=100&q=80" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --green: #073f3b;
+            --green-dark: #052f2c;
+            --green-light: #125b53;
+            --gold: #f4d98b;
+            --cream: #fbf9f3;
+            --white: #ffffff;
+            --text: #243632;
+            --muted: #697873;
+            --border: #e4e8e1;
+            --shadow: 0 12px 35px rgba(7, 63, 59, 0.09);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 120px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            color: #a47a27;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: 0 auto;
+        }
+
+        /* ACCESSIBILITY */
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 15px;
+            z-index: 9999;
+            background: var(--gold);
+            color: var(--green-dark);
+            padding: 12px 18px;
+            border-radius: 6px;
+            font-weight: 700;
+        }
+
+        .skip-link:focus {
+            top: 15px;
+        }
+
+        /* HEADER */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--green);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .header-inner {
+            width: min(1180px, 90%);
+            min-height: 78px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+            color: var(--white);
+        }
+
+        .brand:hover {
+            color: var(--gold);
+        }
+
+        .brand img {
+            width: 55px;
+            height: 52px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid rgba(244, 217, 139, 0.55);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.3;
+        }
+
+        .brand-text strong {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            letter-spacing: 0.2px;
+        }
+
+        .brand-text span {
+            font-size: 10px;
+            color: #e0e9e3;
+            margin-top: 4px;
+            letter-spacing: 0.3px;
+        }
+
+        .main-nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 3px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            display: block;
+            padding: 9px 10px;
+            border-radius: 5px;
+            color: #f5f7f4;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .main-nav a:hover,
+        .main-nav a[aria-current="page"] {
+            background: rgba(244, 217, 139, 0.13);
+            color: var(--gold);
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            min-height: 440px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 36, 32, 0.88),
+                    rgba(3, 36, 32, 0.58),
+                    rgba(3, 36, 32, 0.18)
+                ),
+                url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2000&q=85')
+                center 48% / cover no-repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            width: min(1180px, 92%);
+            margin: 0 auto;
+            padding: 75px 0;
+            color: var(--white);
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--gold);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin-bottom: 17px;
+        }
+
+        .hero h1 {
+            max-width: 760px;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.12;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #edf2ee;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+            padding: 13px 23px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.3s ease;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--green-dark);
+        }
+
+        .btn-gold:hover {
+            background: #fff0bf;
+            color: var(--green-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: rgba(255, 255, 255, 0.7);
+            color: var(--white);
+            margin-left: 8px;
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--green);
+        }
+
+        /* GENERAL SECTIONS */
+
+        .section {
+            padding: 78px 0;
+        }
+
+        .section-white {
+            background: var(--white);
+        }
+
+        .section-heading {
+            max-width: 740px;
+            margin: 0 auto 38px;
+            text-align: center;
+        }
+
+        .section-heading .eyebrow {
+            color: #9a782b;
+            margin-bottom: 9px;
+        }
+
+        .section-heading h2 {
+            color: var(--green);
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(29px, 4vw, 42px);
+            line-height: 1.25;
+            margin-bottom: 13px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* EVENT HIGHLIGHTS */
+
+        .event-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: -38px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .highlight-card {
+            background: var(--white);
+            padding: 26px 25px;
+            border-radius: 9px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(7, 63, 59, 0.06);
+        }
+
+        .highlight-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            background: #f8efd8;
+            color: var(--green);
+            font-size: 23px;
+        }
+
+        .highlight-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--green);
+            font-size: 21px;
+            margin-bottom: 7px;
+        }
+
+        .highlight-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* SCHEDULE TABLE */
+
+        .schedule-wrapper {
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 720px;
+            text-align: left;
+        }
+
+        .schedule-table caption {
+            padding: 16px 20px;
+            text-align: left;
+            color: var(--muted);
+            font-size: 13px;
+            background: #f8faf7;
+        }
+
+        .schedule-table thead {
+            background: var(--green);
+            color: var(--white);
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 17px 20px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        .schedule-table th {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .schedule-table td {
+            font-size: 13px;
+        }
+
+        .schedule-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .schedule-table tbody tr:hover {
+            background: #fbfaf5;
+        }
+
+        .schedule-table td a {
+            font-weight: 700;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 11px;
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .status-completed {
+            background: #e5f3e9;
+            color: #21623a;
+        }
+
+        .status-upcoming {
+            background: #fff0cc;
+            color: #805a09;
+        }
+
+        /* EVENT CARDS */
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        .event-card {
+            overflow: hidden;
+            border-radius: 10px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 25px rgba(7, 63, 59, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            scroll-margin-top: 115px;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .event-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            background: #e7ece7;
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .event-card:hover .event-image img {
+            transform: scale(1.05);
+        }
+
+        .event-image .status {
+            position: absolute;
+            top: 17px;
+            left: 17px;
+        }
+
+        .event-content {
+            padding: 25px;
+        }
+
+        .event-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px 17px;
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .event-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .event-content h3 {
+            color: var(--green);
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            line-height: 1.35;
+            margin-bottom: 12px;
+        }
+
+        .event-content p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 17px;
+        }
+
+        .event-content .text-link {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 3px;
+        }
+
+        /* CALL TO ACTION */
+
+        .cta-section {
+            padding: 75px 0;
+            background:
+                linear-gradient(
+                    110deg,
+                    rgba(5, 47, 44, 0.96),
+                    rgba(7, 63, 59, 0.91)
+                ),
+                url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80')
+                center / cover no-repeat;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            max-width: 750px;
+            margin: 0 auto 15px;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(30px, 4vw, 43px);
+            line-height: 1.25;
+        }
+
+        .cta-section p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #e0e9e3;
+            font-size: 15px;
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            background: #042c29;
+            color: #e4ece7;
+            padding: 55px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 45px;
+            padding-bottom: 38px;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            color: var(--white);
+            font-size: 25px;
+            margin-bottom: 13px;
+        }
+
+        .footer-about p {
+            color: #bdcec6;
+            font-size: 13px;
+            max-width: 340px;
+        }
+
+        .footer-column h3 {
+            color: var(--gold);
+            font-size: 14px;
+            margin-bottom: 17px;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 9px 15px;
+        }
+
+        .footer-links a,
+        .footer-contact a {
+            color: #d3dfd8;
+            font-size: 12px;
+        }
+
+        .footer-links a:hover,
+        .footer-contact a:hover {
+            color: var(--gold);
+        }
+
+        .footer-contact p {
+            color: #bdcec6;
+            font-size: 13px;
+            margin-bottom: 10px;
+            overflow-wrap: anywhere;
+        }
+
+        .footer-bottom {
+            padding: 19px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            color: #b8c9c1;
+            font-size: 11px;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 1100px) {
+            .header-inner {
+                flex-direction: column;
+                justify-content: center;
+                padding: 15px 0;
+                gap: 12px;
+            }
+
+            .main-nav ul {
+                justify-content: center;
+            }
+
+            .main-nav a {
+                padding: 8px 9px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .hero {
+                min-height: 400px;
+            }
+
+            .hero-content {
+                padding: 65px 0;
+            }
+
+            .event-highlights {
+                grid-template-columns: 1fr;
+                margin-top: 25px;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .event-image {
+                height: 260px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .footer-about {
+                grid-column: 1 / -1;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-inner {
+                width: 94%;
+                padding: 12px 0;
+            }
+
+            .brand img {
+                width: 45px;
+                height: 43px;
+            }
+
+            .brand-text strong {
+                font-size: 20px;
+            }
+
+            .brand-text span {
+                font-size: 9px;
+            }
+
+            .main-nav ul {
+                gap: 2px;
+            }
+
+            .main-nav a {
+                padding: 7px;
+                font-size: 11px;
+            }
+
+            .hero {
+                min-height: 370px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 12px 15px;
+                font-size: 12px;
+            }
+
+            .btn-outline {
+                margin: 10px 0 0;
+            }
+
+            .section {
+                padding: 48px 0;
+            }
+
+            .event-image {
+                height: 220px;
+            }
+
+            .event-content {
+                padding: 20px;
+            }
+
+            .event-content h3 {
+                font-size: 22px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 27px;
+            }
+
+            .footer-about {
+                grid-column: auto;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="index.html" class="brand" aria-label="Safarnama Diaries home">
+                <img
+                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=200&q=80"
+                    alt="Mountain landscape logo"
+                    width="55"
+                    height="52"
+                >
+
+                <span class="brand-text">
+                    <strong>Safarnama Diaries</strong>
+                    <span>Real journeys. Real stories. Across Pakistan.</span>
+                </span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="writers.html">Writers</a></li>
+                    <li><a href="travel-tips.html">Travel Tips</a></li>
+                    <li><a href="submit-story.html">Share Your Story</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="events.html" aria-current="page">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">Explore • Connect • Create</span>
+
+                <h1>Travel Together, Create Memories</h1>
+
+                <p>
+                    Join the Safarnama Diaries community for photography walks,
+                    creative writing workshops and travel story contests.
+                    Every event is a new opportunity to discover Pakistan
+                    and share your journey.
+                </p>
+
+                <a href="#upcoming-events" class="btn btn-gold">
+                    Explore Events &rarr;
+                </a>
+
+                <a href="#event-schedule" class="btn btn-outline">
+                    View Schedule
+                </a>
+            </div>
+        </section>
+
+        <!-- HIGHLIGHT CARDS -->
+        <section class="container" aria-label="Our event activities">
+            <div class="event-highlights">
+
+                <article class="highlight-card">
+                    <div class="highlight-icon" aria-hidden="true">&#128247;</div>
+                    <h3>Photo Walks</h3>
+                    <p>
+                        Explore beautiful streets, historic places and local
+                        culture through your camera.
+                    </p>
+                </article>
+
+                <article class="highlight-card">
+                    <div class="highlight-icon" aria-hidden="true">&#9997;</div>
+                    <h3>Writing Workshops</h3>
+                    <p>
+                        Learn to turn your travel experiences into engaging
+                        stories that people love to read.
+                    </p>
+                </article>
+
+                <article class="highlight-card">
+                    <div class="highlight-icon" aria-hidden="true">&#127942;</div>
+                    <h3>Story Contests</h3>
+                    <p>
+                        Share your best travel memories and get an opportunity
+                        to feature your story on our website.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- EVENT SCHEDULE -->
+        <section class="section" id="event-schedule">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">Mark Your Calendar</span>
+                    <h2>Event Schedule</h2>
+                    <p>
+                        Check the dates, locations and status of our community
+                        activities so you can plan your next experience.
+                    </p>
+                </div>
+
+                <div class="schedule-wrapper">
+                    <table class="schedule-table">
+
+                        <caption>Safarnama Diaries event schedule for 2026–2027</caption>
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Event</th>
+                                <th scope="col">Venue</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <time datetime="2026-10-01">1 October 2026</time>
+                                </td>
+                                <td>
+                                    <a href="#launch">Website Launch</a>
+                                </td>
+                                <td>Online</td>
+                                <td>
+                                    <span class="status status-completed">Completed</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <time datetime="2026-11-07">7 November 2026</time>
+                                </td>
+                                <td>
+                                    <a href="#photo-walk">Photo Walk: Lahore Walled City</a>
+                                </td>
+                                <td>Delhi Gate, Lahore</td>
+                                <td>
+                                    <span class="status status-upcoming">Upcoming</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <time datetime="2026-11-21">21 November 2026</time>
+                                </td>
+                                <td>
+                                    <a href="#workshop">Travel Story Writing Workshop</a>
+                                </td>
+                                <td>Online</td>
+                                <td>
+                                    <span class="status status-upcoming">Upcoming</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <time datetime="2026-12-01">1 December 2026</time>
+                                    –
+                                    <time datetime="2027-01-31">31 January 2027</time>
+                                </td>
+                                <td>
+                                    <a href="#contest">Northern Areas Story Contest</a>
+                                </td>
+                                <td>Online</td>
+                                <td>
+                                    <span class="status status-upcoming">Upcoming</span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- UPCOMING AND PAST EVENTS -->
+        <section class="section section-white" id="upcoming-events">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">What's Happening</span>
+                    <h2>Our Events &amp; Experiences</h2>
+                    <p>
+                        From our first website launch to upcoming creative
+                        meetups, discover the activities bringing our travel
+                        community together.
+                    </p>
+                </div>
+
+                <div class="events-grid">
+
+                    <!-- WEBSITE LAUNCH -->
+                    <article class="event-card" id="launch">
+
+                        <div class="event-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=85"
+                                alt="Team members meeting around a table"
+                                loading="lazy"
+                                width="1000"
+                                height="650"
+                            >
+
+                            <span class="status status-completed">Completed</span>
+                        </div>
+
+                        <div class="event-content">
+
+                            <div class="event-meta">
+                                <span>&#128197; 1 October 2026</span>
+                                <span>&#128187; Online</span>
+                            </div>
+
+                            <h3>Safarnama Diaries Website Launch</h3>
+
+                            <p>
+                                The official launch of Safarnama Diaries marked
+                                the beginning of our online travel community.
+                                We introduced our first six stories and four
+                                writers. Thank you to everyone who visited
+                                and supported us on launch day.
+                            </p>
+
+                            <a href="stories.html" class="text-link">
+                                Explore Our Stories &rarr;
+                            </a>
+
+                        </div>
+                    </article>
+
+                    <!-- PHOTO WALK -->
+                    <article class="event-card" id="photo-walk">
+
+                        <div class="event-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1000&q=85"
+                                alt="Camera ready to capture travel photographs"
+                                loading="lazy"
+                                width="1000"
+                                height="650"
+                            >
+
+                            <span class="status status-upcoming">Upcoming</span>
+                        </div>
+
+                        <div class="event-content">
+
+                            <div class="event-meta">
+                                <span>&#128197; 7 November 2026</span>
+                                <span>&#128205; Delhi Gate, Lahore</span>
+                            </div>
+
+                            <h3>Photo Walk: Lahore Walled City</h3>
+
+                            <p>
+                                Join us for a morning photography walk through
+                                the historic streets of Lahore's Walled City.
+                                Capture architecture, street life and cultural
+                                details while learning alongside fellow
+                                photography enthusiasts.
+                            </p>
+
+                            <a href="stories.html#lahore-ki-raat" class="text-link">
+                                Read the Lahore Story &rarr;
+                            </a>
+
+                        </div>
+                    </article>
+
+                    <!-- WRITING WORKSHOP -->
+                    <article class="event-card" id="workshop">
+
+                        <div class="event-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85"
+                                alt="Notebook and pen ready for travel story writing"
+                                loading="lazy"
+                                width="1000"
+                                height="650"
+                            >
+
+                            <span class="status status-upcoming">Upcoming</span>
+                        </div>
+
+                        <div class="event-content">
+
+                            <div class="event-meta">
+                                <span>&#128197; 21 November 2026</span>
+                                <span>&#128187; Online</span>
+                            </div>
+
+                            <h3>Travel Story Writing Workshop</h3>
+
+                            <p>
+                                Have a memorable trip but don't know how to
+                                write about it? Learn how to create interesting
+                                openings, describe places with detail and use
+                                photographs to make your travel stories
+                                more engaging.
+                            </p>
+
+                            <a href="writers.html" class="text-link">
+                                Meet Our Writers &rarr;
+                            </a>
+
+                        </div>
+                    </article>
+
+                    <!-- STORY CONTEST -->
+                    <article class="event-card" id="contest">
+
+                        <div class="event-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85"
+                                alt="Majestic mountain landscape representing the northern areas of Pakistan"
+                                loading="lazy"
+                                width="1000"
+                                height="650"
+                            >
+
+                            <span class="status status-upcoming">Upcoming</span>
+                        </div>
+
+                        <div class="event-content">
+
+                            <div class="event-meta">
+                                <span>&#128197; 1 Dec 2026 – 31 Jan 2027</span>
+                                <span>&#127956; Northern Pakistan</span>
+                            </div>
+
+                            <h3>Northern Areas Story Contest</h3>
+
+                            <p>
+                                Share your best story about the mountains,
+                                valleys and people of Gilgit-Baltistan or
+                                Khyber Pakhtunkhwa. Selected winning stories
+                                will be featured on our home page.
+                            </p>
+
+                            <a href="submit-story.html" class="text-link">
+                                Submit Your Story &rarr;
+                            </a>
+
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="cta-section">
+            <div class="container">
+
+                <span class="eyebrow">Be Part of Our Community</span>
+
+                <h2>Your Journey Could Inspire Someone</h2>
+
+                <p>
+                    Have a travel memory, a beautiful photograph or a story
+                    worth sharing? Become part of Safarnama Diaries and inspire
+                    others to explore the beauty of Pakistan.
+                </p>
+
+                <a href="submit-story.html" class="btn btn-gold">
+                    Share Your Story &rarr;
+                </a>
+
+                <a href="contact.html" class="btn btn-outline">
+                    Contact Us
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-about">
+                    <div class="footer-brand">Safarnama Diaries</div>
+
+                    <p>
+                        Real journeys. Real stories. Across Pakistan.
+                        Discover beautiful destinations, read personal travel
+                        experiences and find inspiration for your next journey.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="stories.html">Stories</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="sitemap.html">Site Map</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="writers.html">Writers</a></li>
+                        <li><a href="travel-tips.html">Travel Tips</a></li>
+                        <li><a href="submit-story.html">Share Your Story</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3>Get in Touch</h3>
+
+                    <p>
+                        Questions about an event or want to collaborate with us?
+                        We'd love to hear from you.
+                    </p>
+
+                    <p>
+                        Email:
+                        <a href="mailto:safarnamadiaries@example.com">
+                            safarnamadiaries@example.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="contact.html">Contact &amp; Review &rarr;</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 Safarnama Diaries. All rights reserved.
+                </p>
+
+                <p>Created as a web design course project.</p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

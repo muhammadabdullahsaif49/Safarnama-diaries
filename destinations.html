@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Explore the beautiful destinations of Pakistan with Safarnama Diaries. Discover Hunza, Swat, Lahore, Fairy Meadows, Gwadar and Tharparkar.">
+
+  <meta name="author" content="Safarnama Diaries Team">
+
+  <title>Destinations | Safarnama Diaries</title>
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* =========================
+           GLOBAL STYLES
+        ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: #183b40;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: #07866d;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #045b4d;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #f4d98b;
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Playfair Display", serif;
+      line-height: 1.3;
+    }
+
+    /* =========================
+           HEADER & NAVIGATION
+        ========================= */
+
+    .site-header {
+      background: #073f3b;
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar {
+      width: min(1180px, 90%);
+      min-height: 78px;
+      margin: auto;
+      padding: 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .brand img {
+      width: 55px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      display: block;
+      color: #c6dfd7;
+      font-size: 11px;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 5px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      color: #ffffff;
+      padding: 8px 10px;
+      font-size: 13px;
+      border-radius: 6px;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: #f4d98b;
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    /* =========================
+           BUTTONS
+        ========================= */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: #07866d;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #056653;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: #f4d98b;
+      color: #183b40;
+    }
+
+    .btn-gold:hover {
+      background: #ffffff;
+      color: #073f3b;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+           HERO SECTION
+        ========================= */
+
+    .destination-hero {
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 85px 20px;
+
+      background:
+        linear-gradient(rgba(5, 47, 48, 0.67),
+          rgba(5, 47, 48, 0.82)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85") center 48% / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 820px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #07866d;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .destination-hero .eyebrow {
+      color: #f4d98b;
+    }
+
+    .destination-hero h1 {
+      font-size: clamp(38px, 6vw, 62px);
+      margin-bottom: 20px;
+    }
+
+    .destination-hero p {
+      max-width: 690px;
+      margin: 0 auto 28px;
+      color: #e4efeb;
+      font-size: 17px;
+    }
+
+    /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+    .section {
+      padding: 75px 0;
+    }
+
+    .section-light {
+      background: #f1f8f6;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading.centered {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(29px, 4vw, 40px);
+      color: #073f3b;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: #526966;
+      font-size: 16px;
+    }
+
+    /* =========================
+           DESTINATION DIRECTORY
+        ========================= */
+
+    .destination-directory {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .destination-directory a {
+      background: #ffffff;
+      border: 1px solid #dce9e5;
+      border-radius: 30px;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.25s ease;
+    }
+
+    .destination-directory a:hover {
+      background: #07866d;
+      color: #ffffff;
+      border-color: #07866d;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+           DESTINATION GRID
+        ========================= */
+
+    .destinations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .destination-card {
+      background: #ffffff;
+      border: 1px solid #e0eae6;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 7px 22px rgba(7, 63, 59, 0.05);
+      scroll-margin-top: 115px;
+      transition: transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .destination-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 32px rgba(7, 63, 59, 0.12);
+    }
+
+    .destination-image {
+      width: 100%;
+      height: 235px;
+      object-fit: cover;
+      background: #dce9e5;
+      transition: transform 0.4s ease;
+    }
+
+    .destination-card:hover .destination-image {
+      transform: scale(1.025);
+    }
+
+    .image-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .destination-label {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      background: #f4d98b;
+      color: #183b40;
+      padding: 5px 12px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .destination-content {
+      padding: 23px;
+    }
+
+    .destination-content h2 {
+      color: #073f3b;
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .destination-content>p {
+      color: #526966;
+      font-size: 14px;
+      margin-bottom: 17px;
+    }
+
+    .destination-details {
+      list-style: none;
+      background: #f1f8f6;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+    }
+
+    .destination-details li {
+      color: #526966;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .destination-details li:last-child {
+      margin-bottom: 0;
+    }
+
+    .destination-details strong {
+      color: #073f3b;
+    }
+
+    .destination-footer {
+      border-top: 1px solid #e6eeeb;
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .related-story {
+      font-size: 13px;
+      color: #71837e;
+    }
+
+    .related-story a {
+      display: inline-block;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .explore-link {
+      font-size: 13px;
+      font-weight: 700;
+      align-self: flex-start;
+    }
+
+    /* =========================
+           TRAVEL SEASONS
+        ========================= */
+
+    .season-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .season-card {
+      background: #ffffff;
+      border: 1px solid #dce9e5;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .season-card h3 {
+      color: #073f3b;
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .season-card p {
+      color: #526966;
+      font-size: 14px;
+    }
+
+    .season-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #e8f5f0;
+      color: #07866d;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+           TRAVEL CTA
+        ========================= */
+
+    .destination-cta {
+      padding: 70px 0;
+      background: #073f3b;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .destination-cta .eyebrow {
+      color: #f4d98b;
+    }
+
+    .destination-cta h2 {
+      font-size: clamp(29px, 4vw, 40px);
+      margin-bottom: 16px;
+    }
+
+    .destination-cta p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #d1e3dd;
+    }
+
+    /* =========================
+           FOOTER
+        ========================= */
+
+    .site-footer {
+      background: #052f30;
+      color: #d1e3dd;
+      padding: 55px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 35px;
+    }
+
+    .footer-brand {
+      font-family: "Playfair Display", serif;
+      color: #ffffff;
+      font-size: 24px;
+      margin-bottom: 13px;
+    }
+
+    .footer-column p {
+      color: #c1d6cf;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .footer-column h3 {
+      color: #ffffff;
+      font-family: "DM Sans", sans-serif;
+      font-size: 15px;
+      margin-bottom: 17px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 9px;
+    }
+
+    .footer-links a,
+    .footer-column>p a {
+      color: #c1d6cf;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover,
+    .footer-column>p a:hover {
+      color: #f4d98b;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding-top: 20px;
+      text-align: center;
+      color: #a9c5bc;
+      font-size: 12px;
+    }
+
+    /* =========================
+           SKIP LINK
+        ========================= */
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 10px;
+      z-index: 2000;
+      background: #ffffff;
+      color: #073f3b;
+      padding: 12px 16px;
+      border-radius: 6px;
+    }
+
+    .skip-link:focus {
+      left: 10px;
+    }
+
+    /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+    @media (max-width: 1000px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .destinations-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .season-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .destination-hero {
+        min-height: 350px;
+        padding: 65px 20px;
+      }
+
+      .destination-hero p {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .destinations-grid,
+      .season-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .destination-image {
+        height: 250px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        width: 92%;
+      }
+
+      .brand-text strong {
+        font-size: 20px;
+      }
+
+      .brand-text span {
+        font-size: 10px;
+      }
+
+      .nav-links {
+        gap: 2px;
+      }
+
+      .nav-links a {
+        padding: 7px;
+        font-size: 12px;
+      }
+
+      .destination-image {
+        height: 215px;
+      }
+
+      .destination-content {
+        padding: 19px;
+      }
+
+      .destination-content h2 {
+        font-size: 23px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Skip Link -->
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <div class="navbar">
+
+      <a href="index.html" class="brand">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=120&h=100&q=80"
+          alt="Mountain scenery representing Safarnama Diaries" width="55" height="48">
+
+        <div class="brand-text">
+          <strong>Safarnama Diaries</strong>
+          <span> Real journeys. Real stories. Across Pakistan.</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li>
+            <a href="destinations.html" aria-current="page">
+              Destinations
+            </a>
+          </li>
+          <li><a href="writers.html">Writers</a></li>
+          <li><a href="travel-tips.html">Travel Tips</a></li>
+          <li><a href="submit-story.html">Share Your Story</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+
+    <section class="destination-hero">
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          Discover the Beauty of Pakistan
+        </span>
+
+        <h1>Explore Amazing Destinations</h1>
+
+        <p>
+          From the snow-covered peaks of the north to the
+          historic streets of Lahore and the golden shores
+          of the Arabian Sea, discover places that make
+          every journey unforgettable.
+        </p>
+
+        <a href="#all-destinations" class="btn btn-gold">
+          Explore Destinations &darr;
+        </a>
+
+      </div>
+    </section>
+
+    <!-- DESTINATION DIRECTORY -->
+
+    <section class="section section-light">
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <span class="eyebrow">Your Journey Starts Here</span>
+
+          <h2>Find Your Next Adventure</h2>
+
+          <p>
+            Looking for mountains, cultural experiences,
+            peaceful beaches or desert adventures?
+            Explore our featured destinations and find
+            the perfect place for your next trip.
+          </p>
+
+        </div>
+
+        <nav class="destination-directory" aria-label="Jump to a destination">
+
+          <a href="#hunza">Hunza Valley</a>
+          <a href="#swat">Swat Valley</a>
+          <a href="#lahore">Walled City of Lahore</a>
+          <a href="#fairy-meadows">Fairy Meadows</a>
+          <a href="#gwadar">Gwadar</a>
+          <a href="#thar">Tharparkar</a>
+
+        </nav>
+
+      </div>
+    </section>
+
+    <!-- ALL DESTINATIONS -->
+
+    <section class="section" id="all-destinations">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">Travel Inspiration</span>
+
+          <h2>Beautiful Places to Discover</h2>
+
+          <p>
+            Every destination has its own landscape,
+            traditions and stories. Explore these six
+            remarkable places and read the travel stories
+            connected to each one.
+          </p>
+
+        </div>
+
+        <div class="destinations-grid">
+
+          <!-- DESTINATION 1: HUNZA -->
+
+          <article class="destination-card" id="hunza">
+
+            <div class="image-wrapper">
+
+              <img class="destination-image" src="images/hunza-valley.jpg" alt="Mountain scenery in Hunza Valley"
+                width="600" height="375" loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=85';">
+
+              <span class="destination-label">
+                Mountain Escape
+              </span>
+
+            </div>
+
+            <div class="destination-content">
+
+              <h2>Hunza Valley</h2>
+
+              <p>
+                Surrounded by dramatic mountain peaks,
+                Hunza is known for its beautiful valleys,
+                historic forts, apricot orchards and
+                breathtaking views.
+              </p>
+
+              <ul class="destination-details">
+                <li>
+                  <strong>Region:</strong>
+                  Gilgit-Baltistan
+                </li>
+                <li>
+                  <strong>Best time:</strong>
+                  May to October
+                </li>
+                <li>
+                  <strong>Highlights:</strong>
+                  Karimabad, Baltit Fort and mountain views
+                </li>
+              </ul>
+
+              <div class="destination-footer">
+
+                <div class="related-story">
+                  Related travel story:
+                  <br>
+                  <a href="stories.html#hunza-ki-subah">
+                    A Morning in Hunza &rarr;
+                  </a>
+                </div>
+
+                <a class="explore-link" href="stories.html#hunza-ki-subah">
+                  Read Travel Story &rarr;
+                </a>
+
+              </div>
+
+            </div>
+          </article>
+
+          <!-- DESTINATION 2: SWAT -->
+
+          <article class="destination-card" id="swat">
+
+            <div class="image-wrapper">
+
+              <img class="destination-image" src="images/swat-valley.jpg"
+                alt="Green mountains and beautiful scenery in Swat Valley" width="600" height="375" loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85';">
+
+              <span class="destination-label">
+                Nature & Relaxation
+              </span>
+
+            </div>
+
+            <div class="destination-content">
+
+              <h2>Swat Valley</h2>
+
+              <p>
+                With green hills, flowing rivers and
+                forest-covered mountains, Swat offers
+                a refreshing escape for nature lovers
+                and travellers seeking peaceful scenery.
+              </p>
+
+              <ul class="destination-details">
+                <li>
+                  <strong>Region:</strong>
+                  Khyber Pakhtunkhwa
+                </li>
+                <li>
+                  <strong>Best time:</strong>
+                  April to October
+                </li>
+                <li>
+                  <strong>Highlights:</strong>
+                  Mingora, Malam Jabba and Kalam
+                </li>
+              </ul>
+
+              <div class="destination-footer">
+
+                <div class="related-story">
+                  Related travel story:
+                  <br>
+                  <a href="stories.html#swat-mein-barish">
+                    Rain in the Swat Valley &rarr;
+                  </a>
+                </div>
+
+                <a class="explore-link" href="stories.html#swat-mein-barish">
+                  Read Travel Story &rarr;
+                </a>
+
+              </div>
+
+            </div>
+          </article>
+
+          <!-- DESTINATION 3: LAHORE -->
+
+          <article class="destination-card" id="lahore">
+
+            <div class="image-wrapper">
+
+              <img class="destination-image" src="images/6.webp" alt="Historic Badshahi Mosque in Lahore" width="600"
+                height="375" loading="lazy"
+                onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Badshahi_Mosque_Lahore_3.jpg?width=1000';">
+
+              <span class="destination-label">
+                Culture & History
+              </span>
+
+            </div>
+
+            <div class="destination-content">
+
+              <h2>Walled City of Lahore</h2>
+
+              <p>
+                Step into the historic heart of Lahore,
+                where centuries-old architecture,
+                traditional bazaars, Mughal landmarks
+                and famous food streets bring the
+                city's culture to life.
+              </p>
+
+              <ul class="destination-details">
+                <li>
+                  <strong>Province:</strong>
+                  Punjab
+                </li>
+                <li>
+                  <strong>Best time:</strong>
+                  October to March
+                </li>
+                <li>
+                  <strong>Highlights:</strong>
+                  Delhi Gate, Badshahi Mosque and
+                  traditional food streets
+                </li>
+              </ul>
+
+              <div class="destination-footer">
+
+                <div class="related-story">
+                  Related travel story:
+                  <br>
+                  <a href="stories.html#lahore-ki-raat">
+                    A Night in the Walled City of Lahore &rarr;
+                  </a>
+                </div>
+
+                <a class="explore-link" href="stories.html#lahore-ki-raat">
+                  Read Travel Story &rarr;
+                </a>
+
+              </div>
+
+            </div>
+          </article>
+
+          <!-- DESTINATION 4: FAIRY MEADOWS -->
+
+          <article class="destination-card" id="fairy-meadows">
+
+            <div class="image-wrapper">
+
+              <img class="destination-image" src="images/download.webp"
+                alt="Fairy Meadows with views of the surrounding mountains" width="600" height="375" loading="lazy"
+                onerror="this.onerror=null;this.src='';">
+
+              <span class="destination-label">
+                Adventure & Trekking
+              </span>
+
+            </div>
+
+            <div class="destination-content">
+
+              <h2>Fairy Meadows</h2>
+
+              <p>
+                A spectacular mountain destination
+                offering green meadows, forest trails
+                and impressive views of Nanga Parbat.
+                It is a memorable choice for adventure
+                lovers and experienced hikers.
+              </p>
+
+              <ul class="destination-details">
+                <li>
+                  <strong>Region:</strong>
+                  Gilgit-Baltistan
+                </li>
+                <li>
+                  <strong>Best time:</strong>
+                  June to September
+                </li>
+                <li>
+                  <strong>Highlights:</strong>
+                  Mountain views, camping and trekking
+                </li>
+              </ul>
+
+              <div class="destination-footer">
+
+                <div class="related-story">
+                  Related travel story:
+                  <br>
+                  <a href="stories.html#fairy-meadows-trek">
+                    The Trek to Fairy Meadows &rarr;
+                  </a>
+                </div>
+
+                <a class="explore-link" href="stories.html#fairy-meadows-trek">
+                  Read Travel Story &rarr;
+                </a>
+
+              </div>
+
+            </div>
+          </article>
+
+          <!-- DESTINATION 5: GWADAR -->
+
+          <article class="destination-card" id="gwadar">
+
+            <div class="image-wrapper">
+
+              <img class="destination-image" src="images/gwadar-beach.jpg" alt="Waves along a peaceful coastal beach"
+                width="600" height="375" loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85';">
+
+              <span class="destination-label">
+                Coastal Escape
+              </span>
+
+            </div>
+
+            <div class="destination-content">
+
+              <h2>Gwadar</h2>
+
+              <p>
+                Located along the Arabian Sea, Gwadar
+                attracts visitors with its coastal
+                scenery, fishing culture, sandy beaches
+                and beautiful evening views over the water.
+              </p>
+
+              <ul class="destination-details">
+                <li>
+                  <strong>Province:</strong>
+                  Balochistan
+                </li>
+                <li>
+                  <strong>Best time:</strong>
+                  October to March
+                </li>
+                <li>
+                  <strong>Highlights:</strong>
+                  Beaches, coastal views and sunsets
+                </li>
+              </ul>
+
+              <div class="destination-footer">
+
+                <div class="related-story">
+                  Related travel story:
+                  <br>
+                  <a href="stories.html#gwadar-ka-sahil">
+                    Sunset at Gwadar Beach &rarr;
+                  </a>
+                </div>
+
+                <a class="explore-link" href="stories.html#gwadar-ka-sahil">
+                  Read Travel Story &rarr;
+                </a>
+
+              </div>
+
+            </div>
+          </article>
+
+          <!-- DESTINATION 6: THAR -->
+
+          <article class="destination-card" id="thar">
+
+            <div class="image-wrapper">
+
+              <img class="destination-image" src="images/thar-desert.jpg" alt="Golden sand dunes in a desert landscape"
+                width="600" height="375" loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1000&q=85';">
+
+              <span class="destination-label">
+                Local Culture
+              </span>
+
+            </div>
+
+            <div class="destination-content">
+
+              <h2>Tharparkar Desert</h2>
+
+              <p>
+                Discover a region of open landscapes,
+                colourful traditions, folk music and
+                welcoming villages. Following the
+                monsoon, parts of Tharparkar can turn
+                surprisingly green.
+              </p>
+
+              <ul class="destination-details">
+                <li>
+                  <strong>Province:</strong>
+                  Sindh
+                </li>
+                <li>
+                  <strong>Best time:</strong>
+                  October to March
+                </li>
+                <li>
+                  <strong>Highlights:</strong>
+                  Desert scenery, folk music and
+                  local traditions
+                </li>
+              </ul>
+
+              <div class="destination-footer">
+
+                <div class="related-story">
+                  Related travel story:
+                  <br>
+                  <a href="stories.html#thar-ki-shaam">
+                    An Evening in the Thar Desert &rarr;
+                  </a>
+                </div>
+
+                <a class="explore-link" href="stories.html#thar-ki-shaam">
+                  Read Travel Story &rarr;
+                </a>
+
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAVEL SEASONS -->
+
+    <section class="section section-light">
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <span class="eyebrow">Plan Your Journey</span>
+
+          <h2>When Should You Visit Pakistan?</h2>
+
+          <p>
+            Weather varies across Pakistan, from the
+            northern mountains to the southern coast.
+            Use these general seasonal suggestions
+            when planning your trip.
+          </p>
+
+        </div>
+
+        <div class="season-grid">
+
+          <article class="season-card">
+
+            <span class="season-number">01</span>
+
+            <h3>Spring Adventures</h3>
+
+            <p>
+              Spring is a lovely time to explore many
+              lower-altitude destinations, enjoy
+              pleasant weather and see landscapes
+              coming back to life.
+            </p>
+
+          </article>
+
+          <article class="season-card">
+
+            <span class="season-number">02</span>
+
+            <h3>Summer in the North</h3>
+
+            <p>
+              The warmer months are generally popular
+              for exploring Hunza and Fairy Meadows.
+              Check local road conditions and weather
+              before travelling into the mountains.
+            </p>
+
+          </article>
+
+          <article class="season-card">
+
+            <span class="season-number">03</span>
+
+            <h3>Autumn and Winter Escapes</h3>
+
+            <p>
+              Autumn and winter can be suitable for
+              exploring Lahore and coastal destinations
+              such as Gwadar. Pack according to the
+              local forecast.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SHARE YOUR JOURNEY CTA -->
+
+    <section class="destination-cta">
+      <div class="container">
+
+        <span class="eyebrow">Your Next Adventure Awaits</span>
+
+        <h2>Every Destination Has a Story</h2>
+
+        <p>
+          Have you discovered a beautiful place in Pakistan?
+          Share your travel experience, introduce others to
+          hidden gems and become part of the Safarnama Diaries
+          community.
+        </p>
+
+        <a href="submit-story.html" class="btn btn-gold">
+          Share Your Story &rarr;
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-column">
+
+          <div class="footer-brand">
+            Safarnama Diaries
+          </div>
+
+          <p>
+            Real journeys, memorable experiences and
+            inspiring travel stories from across Pakistan.
+          </p>
+
+          <p>
+            Discover new places and see the world
+            through the eyes of fellow travellers.
+          </p>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>Quick Links</h3>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="stories.html">Travel Stories</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="writers.html">Our Writers</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>Get in Touch</h3>
+
+          <p>
+            Have a travel story to share?
+            We would love to hear from you.
+          </p>
+
+          <p>
+            <a href="submit-story.html">
+              Submit Your Story
+            </a>
+          </p>
+
+          <p>
+            Email:
+            <a href="mailto:safarnamadiaries@example.com">
+              safarnamadiaries@example.com
+            </a>
+          </p>
+
+          <p>
+            <a href="contact.html">
+              Contact & Review
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>
+          &copy; 2026 Safarnama Diaries.
+
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
