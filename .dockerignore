@@ -1,0 +1,24 @@
+# Local data (the container uses its own /data volume)
+data/
+# Python / editor junk
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.idea/
+# Git and secrets
+.git/
+.gitignore
+.env
+# Not needed inside the image
+check_db.py
+show_data.py
+*.docx
+*.pdf
+*.pptx
+README*.md
+DOCKER.md
+Dockerfile
+docker-compose.yml
+.dockerignore
