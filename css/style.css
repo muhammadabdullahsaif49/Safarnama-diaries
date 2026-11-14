@@ -1,0 +1,387 @@
+/* =====================================================
+   Safarnama Diaries - Main Stylesheet (v2: centered, modern)
+   Only CSS. HTML needs just one <link> tag in the <head>.
+   ===================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap");
+
+/* ---------- 1. Design tokens ---------- */
+:root {
+  --green-950: #08302a;
+  --green-900: #0c3d35;
+  --green-700: #166552;
+  --green-500: #23937a;
+  --green-100: #e4f2ee;
+  --gold: #e9a23b;
+  --gold-dark: #b9791a;
+  --cream: #f8f5ee;
+  --white: #ffffff;
+  --text: #2a302e;
+  --muted: #6b7571;
+  --border: #e7e1d3;
+  --radius: 20px;
+  --shadow: 0 6px 24px rgba(8, 48, 42, 0.08);
+  --shadow-hover: 0 16px 38px rgba(8, 48, 42, 0.18);
+  --page-width: 1180px;
+  --gutter: max(24px, calc((100% - var(--page-width)) / 2));
+  --font-body: "Poppins", "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-head: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+/* ---------- 2. Reset and base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(233, 162, 59, 0.14), transparent 38%),
+    radial-gradient(circle at 95% 18%, rgba(35, 147, 122, 0.12), transparent 40%),
+    var(--cream);
+  background-attachment: fixed;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--green-700); text-underline-offset: 3px; transition: color 0.2s; }
+a:hover, a:focus-visible { color: var(--gold-dark); }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 6px; }
+p { margin: 0 0 1em; }
+small { color: var(--muted); font-size: 0.85rem; }
+strong { font-weight: 600; }
+code { background: var(--green-100); color: var(--green-900); padding: 2px 8px; border-radius: 6px; font-size: 0.9em; }
+cite { color: var(--green-900); }
+time { white-space: nowrap; }
+
+/* ---------- 3. Headings (centered) ---------- */
+h1, h2, h3 { font-family: var(--font-head); color: var(--green-900); line-height: 1.22; margin: 0 0 0.6em; }
+h1 { font-size: clamp(2.2rem, 4.6vw, 3.3rem); font-weight: 800; }
+h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); text-align: center; }
+h3 { font-size: 1.2rem; }
+h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+}
+h3::after { content: none; }
+
+/* ---------- 4. Skip link ---------- */
+body > a[href="#main-content"] {
+  position: absolute; left: 16px; top: -70px; z-index: 200;
+  background: var(--gold); color: var(--green-950);
+  padding: 10px 18px; border-radius: 0 0 10px 10px;
+  font-weight: 600; text-decoration: none; transition: top 0.2s;
+}
+body > a[href="#main-content"]:focus { top: 0; }
+
+/* ---------- 5. Sticky header + navigation ---------- */
+body > header {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 8px 24px;
+  padding: 10px var(--gutter);
+  background: rgba(8, 48, 42, 0.94);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-bottom: 3px solid var(--gold);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+}
+body > header > a { display: inline-block; line-height: 0; }
+body > header > a img { width: 168px; height: auto; }
+body > header > p { display: none; }
+
+body > header nav { flex: 1 1 auto; }
+body > header nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 2px; }
+body > header nav a {
+  display: block; padding: 9px 12px;
+  color: #dcefe9; text-decoration: none;
+  font-size: 0.84rem; font-weight: 500;
+  border-radius: 30px; transition: background 0.2s, color 0.2s;
+}
+body > header nav a:hover { background: rgba(255, 255, 255, 0.14); color: var(--white); }
+body > header nav a[aria-current="page"] { background: var(--gold); color: var(--green-950); font-weight: 600; }
+
+/* ---------- 6. Main content area (grid) ---------- */
+main {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 52px 24px 80px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+main > * { grid-column: 1 / -1; min-width: 0; }
+main:has(#launch) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+main:has(#ayesha-khan) { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+
+main > h1 { text-align: center; margin-bottom: 0.1em; }
+main > h1::after {
+  content: ""; display: block; width: 100px; height: 5px; margin: 16px auto 0;
+  border-radius: 5px; background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+}
+main > h1 + p { justify-self: center; text-align: center; max-width: 720px; font-size: 1.08rem; color: var(--muted); margin-bottom: 0; }
+
+/* Loose paragraphs directly inside main are centered */
+main > p { justify-self: center; text-align: center; max-width: 760px; margin: 0; }
+
+/* Standard card */
+main > section, main > article, main > nav, main > form {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 38px 40px;
+}
+main ul, main ol { padding-left: 1.4em; margin: 0 0 1em; }
+main li { margin-bottom: 0.4em; }
+main li::marker { color: var(--green-500); }
+
+/* Plain content sections (About, Travel Tips ...): readable centered column */
+main > section:not([id]) > p,
+main > section:not([id]) > ul,
+main > section:not([id]) > ol,
+main > section:not([id]) > address { max-width: 820px; margin-left: auto; margin-right: auto; }
+
+/* ---------- 7. Home page ---------- */
+
+/* Hero with title over the picture */
+main > section[aria-labelledby="welcome"] {
+  display: grid; padding: 0; overflow: hidden; text-align: center;
+  border: none; box-shadow: var(--shadow-hover);
+}
+main > section[aria-labelledby="welcome"] > img {
+  grid-area: 1 / 1; width: 100%; height: 460px; object-fit: cover;
+  filter: brightness(0.6) saturate(1.15);
+}
+main > section[aria-labelledby="welcome"] > h1 {
+  grid-area: 1 / 1; align-self: center; z-index: 1; margin: 0; padding: 0 30px;
+  color: #fff; font-size: clamp(2.2rem, 5.4vw, 4rem);
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.55);
+}
+main > section[aria-labelledby="welcome"] > h1::after {
+  content: ""; display: block; width: 90px; height: 5px; margin: 18px auto 0;
+  border-radius: 5px; background: var(--gold);
+}
+main > section[aria-labelledby="welcome"] > p { grid-area: auto; max-width: 840px; margin: 0 auto 1em; padding: 0 30px; font-size: 1.05rem; }
+main > section[aria-labelledby="welcome"] > p:first-of-type { margin-top: 38px; }
+main > section[aria-labelledby="welcome"] > p:last-child { padding-bottom: 38px; margin-bottom: 0; }
+
+/* What you will find - centered tiles */
+main > section[aria-labelledby="what-inside"] ul {
+  max-width: none; list-style: none; padding: 0; margin: 28px 0 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px;
+}
+main > section[aria-labelledby="what-inside"] li {
+  margin: 0; padding: 22px 20px; text-align: center; font-size: 0.94rem;
+  background: var(--green-100); border-radius: 16px; border-bottom: 4px solid var(--green-500);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+main > section[aria-labelledby="what-inside"] li:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+main > section[aria-labelledby="what-inside"] li a { display: block; font-family: var(--font-head); font-size: 1.15rem; margin-bottom: 4px; text-decoration: none; color: var(--green-900); }
+
+/* Grids inside home sections */
+main > section[aria-labelledby="featured-stories"],
+main > section[aria-labelledby="glimpse-destinations"] {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px;
+}
+main > section[aria-labelledby="featured-stories"] > h2,
+main > section[aria-labelledby="featured-stories"] > p,
+main > section[aria-labelledby="glimpse-destinations"] > h2,
+main > section[aria-labelledby="glimpse-destinations"] > p { grid-column: 1 / -1; max-width: none; margin: 0; text-align: center; }
+main > section[aria-labelledby="featured-stories"] > h2,
+main > section[aria-labelledby="glimpse-destinations"] > h2 { margin-bottom: 6px; }
+
+/* Story preview cards (home) */
+main > section[aria-labelledby="featured-stories"] > article {
+  display: flex; flex-direction: column; text-align: center;
+  border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: var(--white);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+main > section[aria-labelledby="featured-stories"] > article:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+main > section[aria-labelledby="featured-stories"] > article img { order: -1; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+main > section[aria-labelledby="featured-stories"] > article h3 { margin: 18px 20px 6px; font-size: 1.2rem; }
+main > section[aria-labelledby="featured-stories"] > article h3 a { text-decoration: none; color: var(--green-900); }
+main > section[aria-labelledby="featured-stories"] > article p { margin: 0 20px 10px; font-size: 0.93rem; }
+main > section[aria-labelledby="featured-stories"] > article p:last-child { margin: auto 20px 22px; padding-top: 6px; font-weight: 600; }
+
+/* Event highlight + call to action */
+main > section[aria-labelledby="next-event"] { text-align: center; border-top: 6px solid var(--gold); }
+main > section[aria-labelledby="stay-in-touch"] {
+  text-align: center; border: none;
+  background: linear-gradient(135deg, var(--green-700), var(--green-950));
+  color: #e4f4ee;
+}
+main > section[aria-labelledby="stay-in-touch"] h2 { color: var(--white); }
+main > section[aria-labelledby="stay-in-touch"] a { color: var(--gold); font-weight: 600; }
+main > section[aria-labelledby="stay-in-touch"] p:last-child { margin-bottom: 0; }
+
+/* ---------- 8. Figures and gallery ---------- */
+figure {
+  margin: 0; background: var(--white); border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden; box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+figure:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+figure img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform 0.6s; }
+figure:hover img { transform: scale(1.07); }
+figure a { display: block; overflow: hidden; line-height: 0; }
+figcaption { padding: 14px 16px; text-align: center; font-size: 0.9rem; font-weight: 500; color: var(--green-900); line-height: 1.5; }
+figure { overflow: hidden; }
+
+main > section[aria-labelledby^="g-"] {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px;
+}
+main > section[aria-labelledby^="g-"] > h2 { grid-column: 1 / -1; margin-bottom: 10px; }
+
+/* ---------- 9. Cards: stories, destinations, writers, events ---------- */
+main > article, main > section[id] {
+  display: flex; flex-direction: column; text-align: center;
+  padding: 0; overflow: hidden; scroll-margin-top: 100px;
+  grid-column: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+main > article:hover, main > section[id]:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+main > article > img, main > section[id] > img {
+  order: -1; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; margin: 0;
+  border-radius: 0; box-shadow: none;
+}
+main > article > *:not(img), main > section[id] > *:not(img) { margin-left: 28px; margin-right: 28px; }
+main > article > h2, main > section[id] > h2 { margin-top: 26px; font-size: 1.45rem; }
+main > article > p:last-child, main > section[id] > *:last-child { margin-bottom: 28px; }
+main > article > p small, main > section[id] > p small { font-size: 0.82rem; }
+main > article > p:last-child { font-size: 0.88rem; font-weight: 600; }
+main > article > p:last-child a { text-decoration: none; }
+
+/* Chips for destination facts and writer story lists */
+main > section[id] ul { list-style: none; padding: 0; margin-top: 4px; margin-bottom: 14px; }
+main > section[id] li {
+  margin: 6px 0; padding: 7px 14px; font-size: 0.88rem;
+  background: var(--green-100); border-radius: 12px;
+}
+
+/* Writers: round avatar */
+main > section[id] > img[alt^="Profile picture"] {
+  order: -1; width: 140px; height: 140px; aspect-ratio: 1 / 1;
+  margin: 34px auto 0; border-radius: 50%; border: 6px solid var(--green-100);
+  box-shadow: var(--shadow);
+}
+main > section[id] > img[alt^="Profile picture"] + h2 { margin-top: 18px; }
+
+/* "Jump to a story" navigation */
+main > nav { text-align: center; padding: 30px 36px; }
+main > nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+main > nav li { margin: 0; }
+main > nav a {
+  display: block; padding: 9px 18px; border-radius: 30px; text-decoration: none;
+  background: var(--green-100); font-weight: 500; font-size: 0.9rem; transition: background 0.2s, transform 0.2s;
+}
+main > nav a:hover { background: var(--gold); color: var(--green-950); transform: translateY(-2px); }
+
+/* ---------- 10. Tables ---------- */
+table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; font-size: 0.95rem; }
+caption { caption-side: top; text-align: center; font-weight: 600; color: var(--muted); padding: 0 0 12px; font-size: 0.9rem; }
+th, td { padding: 15px 20px; text-align: left; border: none; border-bottom: 1px solid var(--border); }
+thead th { background: linear-gradient(135deg, var(--green-700), var(--green-900)); color: var(--white); font-weight: 600; border-bottom: none; }
+tbody tr:nth-child(even) { background: #f6faf8; }
+tbody tr { transition: background 0.2s; }
+tbody tr:hover { background: var(--green-100); }
+tbody tr:last-child td { border-bottom: none; }
+td a { font-weight: 500; }
+
+/* ---------- 11. Contact details ---------- */
+address {
+  font-style: normal; text-align: center; line-height: 2.1;
+  padding: 22px 26px; background: var(--green-100);
+  border-radius: 16px; border-bottom: 4px solid var(--green-500);
+}
+
+/* ---------- 12. Forms (centered card) ---------- */
+main > form, main > section[aria-labelledby="review-form"] { justify-self: center; width: 100%; max-width: 860px; }
+main > section[aria-labelledby="review-form"] > p { text-align: center; }
+form { margin-top: 6px; }
+
+fieldset { border: 1px solid var(--border); border-radius: 16px; padding: 22px 26px 12px; margin: 0 0 24px; background: #fbfaf6; }
+legend {
+  font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; color: var(--green-950);
+  padding: 4px 18px; background: linear-gradient(90deg, var(--gold), #f2bd6a); border-radius: 30px;
+}
+label { font-weight: 500; font-size: 0.93rem; color: var(--green-900); }
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"],
+input[type="date"], input[type="file"], select, textarea {
+  width: 100%; margin-top: 6px; padding: 12px 16px;
+  font-family: inherit; font-size: 0.95rem; color: var(--text);
+  background: var(--white); border: 1.5px solid #d3dcd8; border-radius: 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+textarea { resize: vertical; min-height: 150px; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--green-500); box-shadow: 0 0 0 4px rgba(35, 147, 122, 0.18); }
+input[type="file"] { background: var(--green-100); }
+input[type="radio"], input[type="checkbox"] { width: 18px; height: 18px; margin: 0 8px 0 0; vertical-align: middle; accent-color: var(--green-700); }
+input[type="radio"] + label, input[type="checkbox"] + label { font-weight: 400; color: var(--text); cursor: pointer; vertical-align: middle; margin-right: 18px; }
+
+button {
+  font-family: inherit; font-size: 0.97rem; font-weight: 600;
+  padding: 13px 34px; margin: 4px 8px; border-radius: 40px;
+  border: 2px solid var(--green-700); cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+button[type="submit"] { background: linear-gradient(135deg, var(--green-700), var(--green-900)); color: var(--white); }
+button[type="submit"]:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+button[type="reset"] { background: transparent; color: var(--green-700); }
+button[type="reset"]:hover { background: var(--green-100); }
+form > p:last-child { text-align: center; margin-bottom: 0; }
+
+/* ---------- 13. Footer ---------- */
+body > footer {
+  background: linear-gradient(180deg, var(--green-900), var(--green-950));
+  color: #bcd8cf; padding: 44px var(--gutter) 30px; text-align: center;
+  border-top: 4px solid var(--gold);
+}
+body > footer hr { display: none; }
+body > footer p { margin: 0 0 12px; font-size: 0.93rem; }
+body > footer a { color: #eaf7f2; text-decoration: none; padding: 0 8px; }
+body > footer a:hover { color: var(--gold); text-decoration: underline; }
+body > footer p:last-child { margin: 20px 0 0; font-size: 0.82rem; color: #86ada1; }
+
+/* ---------- 14. Responsive ---------- */
+@media (max-width: 1100px) {
+  body > header { position: static; justify-content: center; }
+  body > header nav { flex-basis: 100%; }
+  body > header nav ul { justify-content: center; }
+}
+@media (max-width: 1000px) {
+  main, main:has(#launch), main:has(#ayesha-khan) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  main > section[aria-labelledby="featured-stories"],
+  main > section[aria-labelledby="glimpse-destinations"],
+  main > section[aria-labelledby^="g-"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  main, main:has(#launch), main:has(#ayesha-khan) { grid-template-columns: minmax(0, 1fr); padding: 34px 14px 56px; gap: 22px; }
+  main > section, main > nav, main > form { padding: 26px 18px; }
+  main > section[id], main > article { padding: 0; }
+  main > section[aria-labelledby="featured-stories"],
+  main > section[aria-labelledby="glimpse-destinations"],
+  main > section[aria-labelledby^="g-"] { grid-template-columns: minmax(0, 1fr); }
+  main > section[aria-labelledby="welcome"] { padding: 0; }
+  main > section[aria-labelledby="welcome"] > img { height: 300px; }
+  main > section[aria-labelledby="welcome"] > p { padding: 0 20px; }
+  body > header nav a { padding: 8px 11px; font-size: 0.82rem; }
+  fieldset { padding: 18px 14px 8px; }
+  table { display: block; overflow-x: auto; font-size: 0.85rem; }
+  th, td { padding: 10px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* ---------- 15. Print ---------- */
+@media print {
+  body { background: #fff; }
+  body > header, body > footer nav, body > a[href="#main-content"] { display: none; }
+  main > section, main > article { box-shadow: none; break-inside: avoid; }
+}
